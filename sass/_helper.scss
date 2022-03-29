@@ -1,0 +1,24 @@
+@import "mixins";
+//helper classes
+.flex{
+    display: flex;
+
+    &-jc-sb{
+    justify-content: space-between;
+    }
+    &-jc-c{
+    justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+.spacing{
+
+    padding: 23px;
+    @include breakpoint-up(large) {
+      padding: 80px;
+    }
+
+}

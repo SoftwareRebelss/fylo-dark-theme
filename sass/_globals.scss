@@ -1,0 +1,425 @@
+@import "variables";
+@import "mixins";
+html{
+    font-size:100%; 
+    box-sizing:border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body{
+   margin: 0; 
+   padding: 0;
+   line-height: 1.3; 
+   font-size:0.9375rem;
+   background: $main-background;
+
+}
+a, a:visited {
+    text-decoration: none;
+}
+
+.illustration-intro{
+ width: 100%;
+ margin: 0 auto;
+
+ @include breakpoint-up(large) {
+   padding-left: 200px;
+   padding-right: 200px;
+   margin-top: -100px;
+}
+}
+.container{
+    background:hsla(213, 26%, 7%, 0.842);
+.intro-text{
+    @include breakpoint-up(large) {
+       width: 50%;
+       margin: 0 auto;
+        
+     }
+
+    text-align: center;
+    .intro-head{
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        color: $White;
+        font-weight: 700;
+
+    }
+    .intro-p{
+    font-size: $Font-size;
+    font-family: 'Open Sans', sans-serif;
+    color: $White;
+    font-weight: 400;
+    }
+
+    .btn{
+        padding: 15px 80px;
+        background-image: linear-gradient(to right, $cyan-call-to-action-gradient,$blue-call-to-action-gradient);
+        color: $White;
+        font-family: 'Open Sans', sans-serif;
+        font-size: $Font-size;
+        font-weight: 400;
+        border-radius: 80px;
+        border: none;
+        @include breakpoint-up(large) {
+            padding: 22px 95px;
+            background-image: linear-gradient(to right, $cyan-call-to-action-gradient,$blue-call-to-action-gradient);
+            color: $White;
+            font-family: 'Open Sans', sans-serif;
+            font-size: $Font-size;
+            font-weight: 400;
+            border-radius: 80px;
+            border: none;
+             
+          }
+    }
+    .btn:hover{
+        background: hsl(198, 60%, 50%);
+    }
+}
+.grid-container-one{
+    @include breakpoint-up(large) {
+        display: flex;
+         
+      }
+   .grid-item{
+       text-align: center;
+       @include breakpoint-up(large) {
+        flex:2;
+        order: 1;
+        width: 60%;
+         
+      }
+       .heading{
+           color: $White;
+           font-size: $Font-size;
+           font-weight: 700;
+           font-family: 'Raleway', sans-serif;
+       }
+       .paragraph{
+        color: $White;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+       }
+   } 
+}
+
+.grid-container-two{
+    margin-top: 100px;
+    @include breakpoint-up(large) {
+        display: flex;
+         
+      }
+   .grid-item-image{
+    @include breakpoint-up(large) {
+        flex: 1;
+        order: 1; 
+   }   
+}
+
+.grid-item-text{
+    @include breakpoint-up(large) {
+        flex: 0.5;
+        order: 2; 
+   } 
+    .heading{
+        color: $White;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+    }
+    .paragraph{
+        color: $White;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+    } 
+    .see-fylo{
+        color:$cyan-call-to-action-gradient;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .see-fylo:hover{
+      color: $White;
+      transition: opacity 200ms ease-in; 
+     
+    }
+
+}
+
+}
+.qoute{
+   margin-bottom: -50px;
+   @include breakpoint-up(large) {
+
+    margin-bottom: -163px;
+    margin-left: 25px;
+}
+    .qoutes{
+        width:30px;
+        
+    }
+}
+ 
+.grid-container-three{
+
+    @include breakpoint-up(large) {
+        display: flex;
+        margin-right: 10px; 
+   }
+   
+  
+    .grid-item-three{
+      
+       width: 100%;
+       background:$testimonials-background; 
+       margin-bottom:24px;
+       border-radius: 9px;
+       padding:23px;
+
+
+       .paragraph{
+        color: $White;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif; 
+       }
+       .small-grid{
+         display: flex;  
+         .left{
+            flex: 0.5;
+            order: 1;
+            img.profile{
+            border-radius:50%;
+            width: 50px;
+           }  
+         }
+         .right{
+            flex:2;
+            order: 2;
+            margin-top:-10px;
+
+            .profile-head{
+                color: $White;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: 'Raleway', sans-serif;
+            } 
+            .profile-p{
+                color: $White;
+                font-size:10px;
+                font-weight: 400;
+                font-family: 'Open Sans', sans-serif; 
+            }
+
+         }
+       }
+    }
+}
+@include breakpoint-up(large) {
+  
+    .testimonial-two{
+        margin-left: 20px;
+    }
+}
+
+.form-container{
+    width: 100%;
+    border-radius: 8px;
+    background: $email-sign-up-background;
+    
+    
+    @include breakpoint-up(large) {
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 8px;
+        
+        text-align: center;
+       }
+    
+    .heading{
+        color: $White;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif; 
+    }
+    .paragraph{
+        color: $White;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif; 
+    }
+    .input-type{
+        @include breakpoint-up(large) {
+     display: flex;
+    }
+    .left-input{
+        input{
+            border-radius: 80px;
+            border:none;
+            background: $White;
+            color: grey;
+            width: 100%;
+            padding: 15px 80px;
+            margin-bottom: 10px;
+           
+        }
+        @include breakpoint-up(large) {
+         flex: 1;
+         order: 1;
+        }  
+    }
+    .right-input{
+        .btn{
+            padding: 15px 80px;
+            background-image: linear-gradient(to right, $cyan-call-to-action-gradient,$blue-call-to-action-gradient);
+            color: $White;
+            font-family: 'Open Sans', sans-serif;
+            font-size: $Font-size;
+            font-weight: 400;
+            border-radius: 80px;
+            border: none;
+            width: 100%;
+            
+            @include breakpoint-up(large) {
+                margin-left: 10px;
+               } 
+        }
+        .btn:hover{
+            background: hsl(198, 60%, 50%);
+        }
+        @include breakpoint-up(large) {
+            flex: 0.5;
+            order: 2;
+           } 
+    }
+   
+    }
+   
+}
+.error{
+    color: rgb(214, 14, 14);
+    font-family: 'Open Sans', sans-serif;
+    font-size: $Font-size;
+    font-weight: 400;
+    text-align: left;
+    margin-top: -10px;
+    .error-messege{
+    color: red;
+    }
+}
+
+}
+
+.footer-container{
+  background: $footer-background;
+  @include breakpoint-up(large) {
+    display: flex;
+}
+  .f-grid{
+    @include breakpoint-up(large) {
+        flex: 1;
+        order: 1;
+    }
+    .logo{
+        width: 5.625rem;
+    
+        @include breakpoint-up(large) {
+        width: 10.5rem;
+        }
+        }
+    .location{
+      display: flex;
+      @include breakpoint-up(large) {
+        flex: 1;
+        order: 2;
+    }  
+      margin-top: 10px;
+      .icon-location{
+          flex: 0.1;
+          order: 1;
+      }
+      .text-location{
+          flex: 1;
+          order: 2;
+          .paragraph{
+            color: $White;
+            font-size: $Font-size;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;  
+          }
+      }
+    }  
+  
+      
+  }
+  .phone-email{
+    @include breakpoint-up(large) {
+        flex: 1;
+        order: 3;
+    } 
+  a{
+            color: $White;
+            font-size: $Font-size;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+      margin-top: 10px;
+       img{
+           margin-right: 10px;
+       }
+  }
+  
+  }
+  .links{
+    @include breakpoint-up(large) {
+        flex: 1;
+        order: 4;
+    } 
+      a{
+        display: block;
+        color: $White;
+        font-size: $Font-size;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0.625rem;
+      }
+      a:hover{
+        font-weight: bold; 
+      }
+      
+
+  }
+  .socials{
+    @include breakpoint-up(large) {
+        display: none;
+    } 
+      display: inline-block;
+      padding-left: 40%;
+     
+      .uil{
+          border: 1px solid white;
+          border-radius: 80px;
+          color: white;
+          background: none;
+          width: 25px;
+          padding: 8px;
+         
+      }
+      .uil-facebook-f:hover{
+    color:hsl(246, 97%, 49%);
+    border:2px solid hsl(246, 97%, 49%); 
+    }
+      .uil-instagram:hover{
+        color:hsla(0, 87%, 33%, 0.651);
+        border: 2px solid hsla(0, 87%, 33%, 0.651);
+    }
+      .uil-twitter:hover{
+        color:hsla(192, 92%, 49%, 0.651);
+        border:2px solid hsla(192, 92%, 49%, 0.651);
+    }
+  }
+}
