@@ -1,6 +1,6 @@
 # Frontend Mentor - Loopstudios landing page
 
-![Design preview for the Fylo dark theme landing page challenge](/images/LTPreview.png)
+![Design preview for the Fylo dark theme landing page challenge](/images/LTPreview.PNG)
 
 ## Welcome! 👋
 
